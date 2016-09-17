@@ -2,18 +2,15 @@ package com.example.android.miwok;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
-class NumbersActivity extends AppCompatActivity  {
+class NumbersActivity extends AppCompatActivity {
     int i;
 //Adding the Array List member was not working over here. add() method was also not working over here
-
-
-
-
-
 
 
     @Override
@@ -24,7 +21,7 @@ class NumbersActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_numbers);
 
         //ArrayList implementation in the onCreate method
-        ArrayList<String> words=new ArrayList<String>();
+        List<String> words = new ArrayList<String>();
 
         words.add("one");
         words.add("two");
@@ -33,20 +30,23 @@ class NumbersActivity extends AppCompatActivity  {
         words.add("five");
         words.add("six");
         words.add("seven");
-        words.add("eight"); words.add("nine");
+        words.add("eight");
+        words.add("nine");
         words.add("ten");
 
-        Log.i("Numbers Activity","The array is in "+words.get(0));
-        Log.i("Numbers Activity","The array is in "+words.get(1));
-        Log.i("Numbers Activity","The array is in "+words.get(2));
-        Log.i("Numbers Activity","The array is in "+words.get(3));
-        Log.i("Numbers Activity","The array is in "+words.get(4));
-        Log.i("Numbers Activity","The array is in "+words.get(5)); Log.i("Numbers Activity","The array is in "+words.get(8));
-        Log.i("Numbers Activity","The array is in "+words.get(6));
-        Log.i("Numbers Activity","The array is in "+words.get(7));
+        TextView textView=(TextView)findViewById(R.id.tv1);
 
+        int i=0;
+        LinearLayout rootview = (LinearLayout) findViewById(R.id.rootView);
 
+        while(i<words.size())
+        {
+            TextView tv=new TextView(this);
+            tv.setText(words.get(i));
+            rootview.addView(tv);
+            i++;
 
+        }
 
 
     }
