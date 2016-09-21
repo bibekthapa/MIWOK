@@ -4,24 +4,33 @@
 
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+
+    android:minHeight="@dimen/list_item_height"
+    android:background="@color/tan_background">
     <!--Adding tool namespace allows us to create dynamically the text -->
     <ImageView
         android:id="@+id/image1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"
         />
 
 <LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
     android:orientation="vertical"
-    android:paddingLeft="16dp">
+    android:paddingLeft="16dp"
+    android:background="@color/category_numbers">
     <TextView
         android:id="@+id/miwok_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="lutti"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:height="0dp"
+        android:layout_weight="1"
+            android:gravity="bottom"
         />
 
     <!--Adding tools:text="lutti" allows us not to hardcode.It will only be seen during design-->
@@ -31,6 +40,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
       tools:text="one"
+        android:textAppearance="?android:textAppearanceMedium"
+
+        android:textColor="@android:color/white"
+        android:height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+
+
         />
 </LinearLayout>
 
