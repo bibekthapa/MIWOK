@@ -40,6 +40,8 @@ public class WordAdapterColors extends ArrayAdapter<Word> {
 
             TextView miwokTextView=(TextView)listItemView.findViewById(R.id.miwok_text_view);
             miwokTextView.setText(currentword.getMiwokTranslation());
+
+           
             return listItemView;
         }
     }
