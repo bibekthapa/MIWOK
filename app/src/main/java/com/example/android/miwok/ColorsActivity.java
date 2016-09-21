@@ -11,7 +11,7 @@ public class ColorsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.word_list);
+        setContentView(R.layout.word_list_linearlayout);
         ArrayList<Word> words=new ArrayList<Word>();
         words.add(new Word("red","weṭeṭṭi",R.drawable.color_red));
         words.add(new Word("green","chokokki",R.drawable.color_green));
@@ -22,7 +22,7 @@ public class ColorsActivity extends AppCompatActivity {
         words.add(new Word("dusty yellow","ṭopiisә",R.drawable.color_dusty_yellow));
         words.add(new Word("mustard Yellow","chiwiiṭә",R.drawable.color_mustard_yellow));
 
-        WordAdapterColors wordAdapter=new WordAdapterColors(this,words);
+        WordAdapter wordAdapter=new WordAdapter(this,words);
         ListView listView=(ListView)findViewById(R.id.list);
         listView.setAdapter(wordAdapter);
 

@@ -16,7 +16,7 @@ public class NumbersActivity extends AppCompatActivity {
 
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.word_list);
+        setContentView(R.layout.word_list_linearlayout);
 
         //ArrayList implementation in the onCreate method
 
